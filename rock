@@ -1,0 +1,42 @@
+// Rock Paper Scissor
+
+#include <stdio.h>
+int main() 
+{
+    printf("Rock Paper Scissor\n");
+    printf("You and the Computer will play\n Rules:\n");
+    printf("Rock vs Paper -> Paper wins.\n");
+    printf("Rock vs Scissor -> Rock wins.\n");
+    printf("Paper vs Scissor -> Scissor wins.\n");\
+    printf("If a draw occurs, each player\’s points will be reduced by 1.\n");
+    void rockpaperscissor()
+    {
+    char y,c;
+    printf("Enter the choice you and computer(s,r,p):");
+    scanf("%c %c",&y,&c);
+    int y1=0,c1=0;
+    if((y=='r' && c=='r') || (y=='s' && c=='s') || (y=='p' && c=='p'))
+        {
+            printf("Draw");
+            y1--;
+            c1--;
+        }
+    else
+        {
+            if((y=='r'&& c=='p' )|| y=='s'&& c=='r' || y=='p'&& c=='s')
+            {
+                c1++;
+            }
+            else  
+            {
+                y1++;
+            }
+        
+        }
+        printf("Score:\n");
+        printf("Your Score:%d\n",y1);
+        printf("Computer Score:%d\n",c1);
+    }
+    rockpaperscissor();
+     return 0;
+}
